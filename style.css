@@ -1,0 +1,223 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(to bottom, #e0eafc, #cfdef3);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.banner-container {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+}
+
+.banner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s, transform 10s;
+    transform: scale(1.1); /* Start with a slight zoom-in */
+}
+
+.banner h1 {
+    color: white;
+    text-align: center;
+    font-size: 3em;
+    margin: 20px;
+    font-family: 'Lobster', cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#banner1 {
+    background-image: url('mndir.jpeg');
+}
+
+#banner2 {
+    background-image: url('Dholkalslide.jpeg');
+}
+
+#banner3 {
+    background-image: url('Batisha.jpeg');
+}
+
+#banner4 {
+    background-image: url('Jharalawa.jpeg');
+}
+
+.banner-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.nav-arrow {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.experience, .about, .trip-planner, .destinations {
+    padding: 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(white, transparent);
+}
+
+.experience-photos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.experience-photos img {
+    width: 65%;
+    border-radius: 10px;
+}
+
+h1, h2, h3 {
+    margin: 10px 0;
+}
+
+.destinations {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin: 0 auto;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 10px;
+    width: 80%;
+}
+
+.destination {
+    min-width: 200px;
+    max-width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.destination img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.quick-links ul, .contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.quick-links a, .contact-info a {
+    color: white;
+    text-decoration: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+.video-ad-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    height: 200px;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.video-ad {
+    width: 100%;
+    height: 100%;
+}
+
+.close-video-ad {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+.gallery {
+    padding: 20px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.gallery .img {
+    width: 100%;
+    overflow: hidden;
+    border: 2px solid #ddd;
+}
+
+.gallery .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
